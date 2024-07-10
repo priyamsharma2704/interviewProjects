@@ -32,6 +32,6 @@ export class NotesService {
             this.update(notes => notes.splice(index, 1, note))
         }
 
-        return note
+        return this.notes;
     }
 }

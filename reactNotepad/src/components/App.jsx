@@ -10,6 +10,10 @@ export const App = (props) => {
     const [selected, setSelected] = useState(null)
 
     // (!) Get notes from service
+    let notesData = service.getNotes().then(resp => {
+        //console.log(resp)
+        setNotes(resp);
+    });
 
     // Select new empty note
     function newNote(){
@@ -18,12 +22,12 @@ export const App = (props) => {
 
     // Set note as selected
     function onSelect(note){
-
+        setSelected(note);
     }
 
     // Save note to service
     function onSubmit(note){
-
+        service.saveNote(note).then((resp)=>setNotes(resp));
     }
 
     // Unselect note
@@ -40,10 +44,10 @@ export const App = (props) => {
             </div>
             <div className="row">
                 <div className="col-md-4">
-                    <NotesList notes={[]} />
+                    <NotesList onSelectEvent={onSelect} notes={notes} />
                 </div>
                 <div className="col-md-8">
-                    <NoteForm />
+                    <NoteForm onSubmitEvent={onSubmit} note={selected}/>
                     <div><button id="new-note">New Note</button></div>
                 </div>
             </div>
