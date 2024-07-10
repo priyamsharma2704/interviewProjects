@@ -29,8 +29,8 @@ Your task is to complete simple notes application using provided `NotesService` 
 
 - `NotesService` that's passed as `service` prop to `App` component should be used
 - When a form is submitted, async `saveNote` method should be called on service with the updated note
-- When `App` is created, async `getNotes` method should be called on service and the appropriate component show notes as a list
-- When a new note is added, it should be displayed on the list
+~~- When `App` is created, async `getNotes` method should be called on service and the appropriate component show notes as a list~~
+- ~~When a new note is added, it should be displayed on the list~~
 - *New Note* button should be displayed if no notes are currently selected
 - *New Note* on click should call `newNote` method that puts an empty note object as a selected one
 - When an existing note is saved, it should be updated on the list
@@ -41,14 +41,14 @@ Your task is to complete simple notes application using provided `NotesService` 
 - When the selected note is provided via `note` prop, title and note input fields should be populated
 - When *Cancel* is clicked, tbe selected note should be reset
 - When any field value changes, it should call `onChange` prop with tbe updated note object that will update the selected object appropriately
-- When the form is submitted, it should call `onSubmit` with updated note object
-- `onSubmit` will then use the appropriate service method and update the state accordingly
+- ~~When the form is submitted, it should call `onSubmit` with updated note object~~
+- ~~`onSubmit` will then use the appropriate service method and update the state accordingly~~
 
 ### 3. Use `NotesServices` to populate the list of notes
 
 - Each item in the list should show a note title
 - List component should not keep state, use `notes` prop
-- List component should notify its parent on item click with `onSelect` prop
+- ~~List component should notify its parent on item click with `onSelect` prop~~
 - When note component gets passed a note via `selected` prop, it should add `active` class to the correct list item
 
 ## Setup
