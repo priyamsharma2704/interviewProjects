@@ -11,7 +11,6 @@ export const App = (props) => {
 
     // (!) Get notes from service
     let notesData = service.getNotes().then(resp => {
-        //console.log(resp)
         setNotes(resp);
     });
 
