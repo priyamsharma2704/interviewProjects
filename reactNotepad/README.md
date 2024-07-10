@@ -47,7 +47,7 @@ Your task is to complete simple notes application using provided `NotesService` 
 ### 3. Use `NotesServices` to populate the list of notes
 
 - Each item in the list should show a note title
-- List component should not keep state, use `notes` prop
+- ~~List component should not keep state, use `notes` prop~~
 - ~~List component should notify its parent on item click with `onSelect` prop~~
 - When note component gets passed a note via `selected` prop, it should add `active` class to the correct list item
 
