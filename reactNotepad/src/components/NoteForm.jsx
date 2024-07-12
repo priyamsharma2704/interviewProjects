@@ -1,24 +1,31 @@
 import React from 'react'
 
 export const NoteForm = (props) => {
-    const { note = { title: ' ', text: ' ' }, onSubmitEvent } = props;
+    const { note = { title: ' ', text: ' ' }, onSubmitEvent, onChange } = props;
 
-    console.log(note);
+    //console.log(note);
 
     function handleNoteTextInput(e)
     {
-        note.text = e.target.value;
+        const updatedNote = {...note, text:e.target.value};
+        onChange(updatedNote);
     }
 
     function handleNoteTitleInput(e)
     {
-        note.title = e.target.value;
+        const updatedNote = {...note, title:e.target.value};
+        onChange(updatedNote);
     }
 
     function handleNoteSubmit(e)
     {
         e.preventDefault();
         onSubmitEvent(note);
+    }
+
+    const handleCancel = () =>
+    {
+        console.log(note);
     }
 
     return <form>
@@ -50,6 +57,7 @@ export const NoteForm = (props) => {
                         data-testid="cancel-note"
                         className="btn btn-default pull-right"
                         value="Cancel"
+                        onClick={handleCancel}
                     />
                     <input
                         type="submit"
