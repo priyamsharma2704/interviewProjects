@@ -38,15 +38,15 @@ Your task is to complete simple notes application using provided `NotesService` 
 ### 2. Note Form
 
 - `NoteForm` should be a stateless component. Use the `note` prop for data
-- When the selected note is provided via `note` prop, title and note input fields should be populated
+- ~~When the selected note is provided via `note` prop, title and note input fields should be populated~~
 - When *Cancel* is clicked, tbe selected note should be reset
-- When any field value changes, it should call `onChange` prop with tbe updated note object that will update the selected object appropriately
+- ~~When any field value changes, it should call `onChange` prop with tbe updated note object that will update the selected object appropriately~~
 - ~~When the form is submitted, it should call `onSubmit` with updated note object~~
 - ~~`onSubmit` will then use the appropriate service method and update the state accordingly~~
 
 ### 3. Use `NotesServices` to populate the list of notes
 
-- Each item in the list should show a note title
+- ~~Each item in the list should show a note title~~
 - ~~List component should not keep state, use `notes` prop~~
 - ~~List component should notify its parent on item click with `onSelect` prop~~
 - When note component gets passed a note via `selected` prop, it should add `active` class to the correct list item

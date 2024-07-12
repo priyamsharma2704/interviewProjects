@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { NotesList } from './NotesList'
 import { NoteForm } from './NoteForm'
@@ -6,6 +6,7 @@ import { NoteForm } from './NoteForm'
 export const App = (props) => {
     const { service } = props
 
+    let selectedNoteBackup = {};
     const [notes, setNotes] = useState([])
     const [selected, setSelected] = useState(null)
 
@@ -34,6 +35,15 @@ export const App = (props) => {
 
     }
 
+    const handleNoteOnChange = (note) =>
+    {
+        setSelected(note);
+    }
+
+    // useEffect(()=>{
+    //     console.log(notes);
+    // },[notes]);
+
     return (
         <div className="container">
             <div className="row">
@@ -46,7 +56,7 @@ export const App = (props) => {
                     <NotesList onSelectEvent={onSelect} notes={notes} />
                 </div>
                 <div className="col-md-8">
-                    <NoteForm onSubmitEvent={onSubmit} note={selected}/>
+                    <NoteForm onSubmitEvent={onSubmit} note={selected} onChange={handleNoteOnChange}/>
                     <div><button id="new-note">New Note</button></div>
                 </div>
             </div>
