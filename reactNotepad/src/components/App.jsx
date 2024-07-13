@@ -57,7 +57,7 @@ export const App = (props) => {
                     <NotesList onSelectEvent={onSelect} notes={notes} />
                 </div>
                 <div className="col-md-8">
-                    <NoteForm onSubmitEvent={onSubmit} note={selected} onChange={handleNoteOnChange} onCancel={onCancel}/>
+                    <NoteForm onSubmit={onSubmit} note={selected} onChange={handleNoteOnChange} onCancel={onCancel}/>
                     <div><button id="new-note" onClick={newNote}>New Note</button></div>
                 </div>
             </div>

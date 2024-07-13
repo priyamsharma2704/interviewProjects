@@ -9,6 +9,8 @@ export const NotesList = (props) => {
     }
 
     return <div className="list-group">
-            {notes.map((note,index) => (<div key={index} onClick={()=>handleNoteOnClick(note)}>{note.title}</div>))}
+            <ul>
+                {notes.map((note,index) => (<li key={index} onClick={()=>handleNoteOnClick(note)}>{note.title}</li>))}
+            </ul>
         </div>
 }
