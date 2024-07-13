@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const NoteForm = (props) => {
-    const { note = { title: ' ', text: ' ' }, onSubmitEvent, onChange } = props;
+    const { note = { title: ' ', text: ' ' }, onSubmit, onChange, onCancel} = props;
 
     //console.log(note);
 
@@ -20,11 +20,12 @@ export const NoteForm = (props) => {
     function handleNoteSubmit(e)
     {
         e.preventDefault();
-        onSubmitEvent(note);
+        onSubmit(note);
     }
 
     const handleCancel = () =>
     {
+        onCancel();
         console.log(note);
     }
 
