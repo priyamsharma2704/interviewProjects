@@ -54,7 +54,7 @@ export const App = (props) => {
             </div>
             <div className="row">
                 <div className="col-md-4">
-                    <NotesList onSelectEvent={onSelect} notes={notes} />
+                    <NotesList onSelect={onSelect} notes={notes} />
                 </div>
                 <div className="col-md-8">
                     <NoteForm onSubmit={onSubmit} note={selected} onChange={handleNoteOnChange} onCancel={onCancel}/>

@@ -1,11 +1,11 @@
 import React from 'react'
 
 export const NotesList = (props) => {
-    const { notes, onSelectEvent } = props;
+    const { notes, onSelect } = props;
 
     function handleNoteOnClick(note)
     {
-        onSelectEvent(note);
+        onSelect(note);
     }
 
     return <div className="list-group">
