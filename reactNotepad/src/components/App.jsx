@@ -17,7 +17,7 @@ export const App = (props) => {
 
     // Select new empty note
     function newNote(){
-
+        setSelected({title: " ", text: " "});
     }
 
     // Set note as selected
@@ -58,7 +58,7 @@ export const App = (props) => {
                 </div>
                 <div className="col-md-8">
                     <NoteForm onSubmitEvent={onSubmit} note={selected} onChange={handleNoteOnChange} onCancel={onCancel}/>
-                    <div><button id="new-note">New Note</button></div>
+                    <div><button id="new-note" onClick={newNote}>New Note</button></div>
                 </div>
             </div>
         </div>
