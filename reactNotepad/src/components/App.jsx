@@ -6,9 +6,9 @@ import { NoteForm } from './NoteForm'
 export const App = (props) => {
     const { service } = props
 
-    let selectedNoteBackup = {};
     const [notes, setNotes] = useState([])
     const [selected, setSelected] = useState(null)
+    const [originalSelectedNote, setOriginalSelectedNote] = useState(null);
 
     // (!) Get notes from service
     let notesData = service.getNotes().then(resp => {
@@ -22,6 +22,7 @@ export const App = (props) => {
 
     // Set note as selected
     function onSelect(note){
+        setOriginalSelectedNote(note);
         setSelected(note);
     }
 
@@ -32,7 +33,7 @@ export const App = (props) => {
 
     // Unselect note
     function onCancel(){
-
+        setSelected(originalSelectedNote);
     }
 
     const handleNoteOnChange = (note) =>
@@ -56,7 +57,7 @@ export const App = (props) => {
                     <NotesList onSelectEvent={onSelect} notes={notes} />
                 </div>
                 <div className="col-md-8">
-                    <NoteForm onSubmitEvent={onSubmit} note={selected} onChange={handleNoteOnChange}/>
+                    <NoteForm onSubmitEvent={onSubmit} note={selected} onChange={handleNoteOnChange} onCancel={onCancel}/>
                     <div><button id="new-note">New Note</button></div>
                 </div>
             </div>
