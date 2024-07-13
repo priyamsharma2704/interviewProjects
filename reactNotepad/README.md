@@ -28,12 +28,12 @@ Your task is to complete simple notes application using provided `NotesService` 
 ### 1. App and NotesService
 
 - `NotesService` that's passed as `service` prop to `App` component should be used
-- When a form is submitted, async `saveNote` method should be called on service with the updated note
+- ~~When a form is submitted, async `saveNote` method should be called on service with the updated note~~
 ~~- When `App` is created, async `getNotes` method should be called on service and the appropriate component show notes as a list~~
 - ~~When a new note is added, it should be displayed on the list~~
-- *New Note* button should be displayed if no notes are currently selected
-- *New Note* on click should call `newNote` method that puts an empty note object as a selected one
-- When an existing note is saved, it should be updated on the list
+- ~~*New Note* button should be displayed if no notes are currently selected~~
+- ~~*New Note* on click should call `newNote` method that puts an empty note object as a selected one~~
+- ~~When an existing note is saved, it should be updated on the list~~
 
 ### 2. Note Form
 
