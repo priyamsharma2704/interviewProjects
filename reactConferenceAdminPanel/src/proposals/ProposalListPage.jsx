@@ -12,6 +12,7 @@ export const ProposalListPage = () => {
 
     useEffect(() => {
         getProposalList().then(proposals => {
+            console.log(proposals)
             setProposals(proposals);
         });
     }, []);

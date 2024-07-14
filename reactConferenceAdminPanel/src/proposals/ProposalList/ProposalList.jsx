@@ -5,9 +5,10 @@ import ProposalRow from "../ProposalRow";
 
 import "./ProposalList.css";
 
-const ProposalList = () => (
+const ProposalList = (props) => (
+    //const [proposals] = props;
     <ul data-testid="proposal-list" className="ProposalList">
-        {[].map((proposal) => (
+        {props.proposals.map((proposal) => (
             <li
                 key={proposal.id}
                 className="ProposalList__item"
