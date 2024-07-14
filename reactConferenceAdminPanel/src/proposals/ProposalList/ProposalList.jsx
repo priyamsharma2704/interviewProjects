@@ -5,10 +5,11 @@ import ProposalRow from "../ProposalRow";
 
 import "./ProposalList.css";
 
-const ProposalList = (props) => (
-    //const [proposals] = props;
+const ProposalList = (props) => {
+    const {proposals} = props;
+    return (
     <ul data-testid="proposal-list" className="ProposalList">
-        {props.proposals.map((proposal) => (
+        {proposals.map((proposal) => (
             <li
                 key={proposal.id}
                 className="ProposalList__item"
@@ -26,6 +27,7 @@ const ProposalList = (props) => (
             </li>
         ))}
     </ul>
-);
+    )
+};
 
 export default ProposalList;

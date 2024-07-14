@@ -21,10 +21,10 @@ You are expected to implement missing code used within two subpages:
 
 ### 1. List of proposals
 
-`<ProposalListPage>` should be rendered under `/proposals` URL path and display list of proposals fetched from API (without any sorting nor paging applied).
+~~`<ProposalListPage>` should be rendered under `/proposals` URL path and display list of proposals fetched from API (without any sorting nor paging applied).~~
 
 1. For every proposal following data should be rendered:
-  - talk title,
+  - ~~talk title,~~
   - speaker's name,
   - talk category, prefixed with `category: `,
   - status description: _"rejected"_, _"accepted"_, _"to be decided"_ or _"(unknown)"_ (for any unexpected status), prefixed with `status: `. You need to map existing statuses into these descriptions,

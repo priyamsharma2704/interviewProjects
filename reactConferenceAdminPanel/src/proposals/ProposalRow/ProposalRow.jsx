@@ -10,7 +10,7 @@ const withoutEventDefault = (callback) =>
     };
 
 const ProposalRow = ({ proposal, onStatusUpdate }) => {
-    const { id, title, status } = proposal;
+    const { id, title, status, category } = proposal;
     return (
         <div data-testid={`proposal-id-${id}`} className={classNames("ProposalRow", "ProposalRow--accepted")}>
             <div className="ProposalsRow__status_indicator"/>
@@ -19,7 +19,7 @@ const ProposalRow = ({ proposal, onStatusUpdate }) => {
             </div>
             <div className="ProposalsRow__speaker"/>
             <div className="ProposalsRow__category">
-                category: {}
+                category: {category}
             </div>
             <div className="ProposalsRow__status">
                 status: {status}
