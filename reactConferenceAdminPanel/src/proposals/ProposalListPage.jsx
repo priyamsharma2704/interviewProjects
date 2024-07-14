@@ -12,7 +12,8 @@ export const ProposalListPage = () => {
 
     useEffect(() => {
         getProposalList().then(proposals => {
-            console.log(proposals)
+            console.log(proposals);
+            setIsLoading(false);
             setProposals(proposals);
         });
     }, []);
@@ -28,7 +29,7 @@ export const ProposalListPage = () => {
 
     return (
         <Page title="Call for Papers">
-            <Loading/>
+           { isLoading?<Loading/>:<p></p>}
             <ProposalList
                 proposals={proposals}
                 onProposalStatusUpdate={() => {}}
