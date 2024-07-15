@@ -25,10 +25,10 @@ You are expected to implement missing code used within two subpages:
 
 1. For every proposal following data should be rendered:
   - ~~talk title,~~
-  - speaker's name,
-  - talk category, prefixed with `category: `,
-  - status description: _"rejected"_, _"accepted"_, _"to be decided"_ or _"(unknown)"_ (for any unexpected status), prefixed with `status: `. You need to map existing statuses into these descriptions,
-  - color bar and label indicating whether the proposal was accepted (green), declined (red), or not decided yet (neutral),
+  - ~~speaker's name,~~
+  - ~~talk category, prefixed with `category: `,~~
+  - ~~status description: _"rejected"_, _"accepted"_, _"to be decided"_ or _"(unknown)"_ (for any unexpected status), prefixed with `status: `. You need to map existing statuses into these descriptions,~~
+  - ~~color bar and label indicating whether the proposal was accepted (green), declined (red), or not decided yet (neutral),~~
   - button to accept proposal (if not accepted),
   - button to reject proposal (if not rejected).
 
