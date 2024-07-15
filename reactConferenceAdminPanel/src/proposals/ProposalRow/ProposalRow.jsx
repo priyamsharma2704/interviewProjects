@@ -34,7 +34,7 @@ const ProposalRow = ({ proposal, onStatusUpdate }) =>
             <div className="ProposalsRow__status">
                 status: {status}
             </div>
-            <button disabled className="ProposalsRow__accept_button_placeholder">
+            <button disabled className="ProposalsRow__accept_button">
                 Accept
             </button>
             <button
