@@ -32,7 +32,7 @@ export const ProposalListPage = () => {
            { isLoading?<Loading/>:<p></p>}
             <ProposalList
                 proposals={proposals}
-                onProposalStatusUpdate={() => {}}
+                onProposalStatusUpdate={updateProposalStatus}
             />
         </Page>
     );

@@ -6,7 +6,7 @@ import ProposalRow from "../ProposalRow";
 import "./ProposalList.css";
 
 const ProposalList = (props) => {
-    const {proposals} = props;
+    const {proposals, onProposalStatusUpdate} = props;
     return (
     <ul data-testid="proposal-list" className="ProposalList">
         {proposals.map((proposal) => (
@@ -21,7 +21,7 @@ const ProposalList = (props) => {
                 >
                     <ProposalRow
                         proposal={proposal}
-                        onStatusUpdate={() => {}}
+                        onStatusUpdate={onProposalStatusUpdate}
                     />
                 </Link>
             </li>
