@@ -34,7 +34,9 @@ const ProposalRow = ({ proposal, onStatusUpdate }) =>
             <div className="ProposalsRow__status">
                 status: {status}
             </div>
-            <button disabled className="ProposalsRow__accept_button">
+            <button className="ProposalsRow__accept_button"
+                onClick={withoutEventDefault(() => onStatusUpdate(id, "accepted"))}
+            >
                 Accept
             </button>
             <button
