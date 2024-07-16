@@ -29,7 +29,7 @@ export const ProposalDetailsPage = ({ talkId }) => {
     return (
         <Page
             className="ProposalDetailsPage"
-            title={!talk ? "…" : "title"}
+            title={!talk ? "…" : talk.title}
         >
             <div className="ProposalDetailsPage__content">
                 <div>
@@ -40,8 +40,8 @@ export const ProposalDetailsPage = ({ talkId }) => {
                         back to Call for Papers
                     </Link>
                 </div>
-                <Loading/>
-                <ProposalDetails talk={{}}/>
+                {talk?<span></span>:<Loading/>}
+                <ProposalDetails talk={!talk? {}:talk}/>
             </div>
         </Page>
     );
