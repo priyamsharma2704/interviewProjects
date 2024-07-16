@@ -17,7 +17,7 @@ const ProposalList = (props) => {
                 <Link
                     key={proposal.id}
                     className="ProposalList__item__link"
-                    to={`/proposals/:${proposal.id}`}
+                    to={`/proposals/${proposal.id}`}
                 >
                     <ProposalRow
                         proposal={proposal}

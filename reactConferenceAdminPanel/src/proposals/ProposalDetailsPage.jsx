@@ -15,9 +15,11 @@ export const ProposalDetailsPage = ({ talkId }) => {
     const [talk, setTalk] = useState()
 
     useEffect(() => {
-        getTalk(talkId).then(talk =>
-            setTalk(talk)
-        );
+        getTalk(talkId).then(talk =>{
+            console.log(talk);
+            setTalk(talk);
+            setIsNotFound(false);
+        }).catch(() => setIsNotFound(true))
     }, [])
 
     if (isNotFound) {
