@@ -5,9 +5,11 @@ import ProposalRow from "../ProposalRow";
 
 import "./ProposalList.css";
 
-const ProposalList = () => (
+const ProposalList = (props) => {
+    const {proposals} = props;
+    return (
     <ul data-testid="proposal-list" className="ProposalList">
-        {[].map((proposal) => (
+        {proposals.map((proposal) => (
             <li
                 key={proposal.id}
                 className="ProposalList__item"
@@ -15,7 +17,7 @@ const ProposalList = () => (
                 <Link
                     key={proposal.id}
                     className="ProposalList__item__link"
-                    to={`/proposals`}
+                    to={`/proposals/${proposal.id}`}
                 >
                     <ProposalRow
                         proposal={proposal}
@@ -25,6 +27,7 @@ const ProposalList = () => (
             </li>
         ))}
     </ul>
-);
+    )
+};
 
 export default ProposalList;

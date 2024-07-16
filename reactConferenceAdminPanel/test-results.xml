@@ -1,3 +1,324 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="0" failures="0" errors="0" time="0.001">
+<testsuites name="jest tests" tests="10" failures="6" errors="0" time="1.889">
+  <testsuite name="src/tests/ProposalList.test.jsx" errors="0" failures="1" skipped="0" timestamp="2024-07-15T23:07:46" time="0.995" tests="4">
+    <testcase classname="&lt;ProposalList&gt;" name="renders speaker" time="0.093">
+    </testcase>
+    <testcase classname="&lt;ProposalList&gt;" name="uses proper CSS class for accepted proposal" time="0.011">
+    </testcase>
+    <testcase classname="&lt;ProposalList&gt;" name="uses proper CSS class for rejected proposal" time="0.011">
+    </testcase>
+    <testcase classname="&lt;ProposalList&gt;" name="rejects proposal" time="0.019">
+      <failure>Error: expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+Expected number of calls: 1
+Received number of calls: 0
+    at Object.&lt;anonymous&gt; (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalList.test.jsx:81:40)
+    at Promise.then.completed (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:60:9)
+    at run (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/runTest.js:475:34)
+    at Object.worker (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/testWorker.js:133:12)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="src/tests/ProposalListPage.test.jsx" errors="0" failures="1" skipped="0" timestamp="2024-07-15T23:07:46" time="1.046" tests="1">
+    <testcase classname="&lt;ProposalListPage&gt;" name="updates changed proposal status locally" time="0.16">
+      <failure>Error: expect(element).toHaveClass(&quot;ProposalRow--accepted&quot;)
+
+Expected the element to have class:
+  ProposalRow--accepted
+Received:
+  ProposalRow ProposalRow--rejected
+    at Object.&lt;anonymous&gt; (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalListPage.test.jsx:52:29)</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="src/tests/ProposalDetailsPage.test.jsx" errors="0" failures="4" skipped="0" timestamp="2024-07-15T23:07:46" time="1.118" tests="5">
+    <testcase classname="&lt;ProposalDetailsPage&gt;" name="renders &lt;Loading&gt; before receiving response from API" time="0.096">
+    </testcase>
+    <testcase classname="&lt;ProposalDetailsPage&gt;" name="does not render &lt;ProposalDetails&gt; before receiving response from API" time="0.073">
+      <failure>Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found &lt;div class=&quot;ProposalDetails&quot; data-testid=&quot;proposal-details&quot;&gt;&lt;section class=&quot;DetailsSection ProposalDetails__speaker&quot;&gt;&lt;div class=&quot;DetailsSection__name&quot;&gt;speaker&lt;/div&gt;&lt;div class=&quot;DetailsSection__content&quot; /&gt;&lt;/section&gt;&lt;section class=&quot;DetailsSection ProposalDetails__category&quot;&gt;&lt;div class=&quot;DetailsSection__name&quot;&gt;category&lt;/div&gt;&lt;div class=&quot;DetailsSection__content&quot; /&gt;&lt;/section&gt;&lt;section class=&quot;DetailsSection ProposalDetails__description&quot;&gt;&lt;div class=&quot;DetailsSection__name&quot;&gt;description&lt;/div&gt;&lt;div class=&quot;DetailsSection__content&quot; /&gt;&lt;/section&gt;&lt;/div&gt; instead
+    at Object.&lt;anonymous&gt; (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalDetailsPage.test.jsx:54:55)
+    at Promise.then.completed (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:218:40)
+    at _runTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:60:9)
+    at run (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-circus@27.5.1/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/runTest.js:475:34)
+    at Object.worker (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/jest-runner@27.5.1/node_modules/jest-runner/build/testWorker.js:133:12)</failure>
+    </testcase>
+    <testcase classname="&lt;ProposalDetailsPage&gt;" name="uses proposal title as header" time="0.021">
+      <failure>TestingLibraryElementError: Unable to find an element with the text: Best Title Ever. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;section
+      class=&quot;Page ProposalDetailsPage&quot;
+    &gt;
+      &lt;h1
+        class=&quot;Page__title&quot;
+      &gt;
+        title
+      &lt;/h1&gt;
+      &lt;div
+        class=&quot;ProposalDetailsPage__content&quot;
+      &gt;
+        &lt;div&gt;
+          &lt;a
+            class=&quot;ProposalDetailsPage__back&quot;
+            href=&quot;/proposals&quot;
+          &gt;
+            back to Call for Papers
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;Loading&quot;
+          data-testid=&quot;loading&quot;
+        &gt;
+          &lt;div
+            class=&quot;Loading__content&quot;
+          &gt;
+            loading…
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;ProposalDetails&quot;
+          data-testid=&quot;proposal-details&quot;
+        &gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__speaker&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              speaker
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__category&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              category
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__description&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              description
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+    at getByText (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+    at Object.&lt;anonymous&gt; (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalDetailsPage.test.jsx:70:16)</failure>
+    </testcase>
+    <testcase classname="&lt;ProposalDetailsPage&gt;" name="uses /talks/:talkId API response to render proposal: category" time="0.012">
+      <failure>TestingLibraryElementError: Unable to find an element with the text: testing. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;section
+      class=&quot;Page ProposalDetailsPage&quot;
+    &gt;
+      &lt;h1
+        class=&quot;Page__title&quot;
+      &gt;
+        title
+      &lt;/h1&gt;
+      &lt;div
+        class=&quot;ProposalDetailsPage__content&quot;
+      &gt;
+        &lt;div&gt;
+          &lt;a
+            class=&quot;ProposalDetailsPage__back&quot;
+            href=&quot;/proposals&quot;
+          &gt;
+            back to Call for Papers
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;Loading&quot;
+          data-testid=&quot;loading&quot;
+        &gt;
+          &lt;div
+            class=&quot;Loading__content&quot;
+          &gt;
+            loading…
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;ProposalDetails&quot;
+          data-testid=&quot;proposal-details&quot;
+        &gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__speaker&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              speaker
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__category&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              category
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__description&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              description
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+    at getByText (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalDetailsPage.test.jsx:88:16</failure>
+    </testcase>
+    <testcase classname="&lt;ProposalDetailsPage&gt;" name="uses /talks/:talkId API response to render proposal: speaker" time="0.011">
+      <failure>TestingLibraryElementError: Unable to find an element with the text: Someone Known. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;section
+      class=&quot;Page ProposalDetailsPage&quot;
+    &gt;
+      &lt;h1
+        class=&quot;Page__title&quot;
+      &gt;
+        title
+      &lt;/h1&gt;
+      &lt;div
+        class=&quot;ProposalDetailsPage__content&quot;
+      &gt;
+        &lt;div&gt;
+          &lt;a
+            class=&quot;ProposalDetailsPage__back&quot;
+            href=&quot;/proposals&quot;
+          &gt;
+            back to Call for Papers
+          &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;Loading&quot;
+          data-testid=&quot;loading&quot;
+        &gt;
+          &lt;div
+            class=&quot;Loading__content&quot;
+          &gt;
+            loading…
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;ProposalDetails&quot;
+          data-testid=&quot;proposal-details&quot;
+        &gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__speaker&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              speaker
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__category&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              category
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+          &lt;section
+            class=&quot;DetailsSection ProposalDetails__description&quot;
+          &gt;
+            &lt;div
+              class=&quot;DetailsSection__name&quot;
+            &gt;
+              description
+            &lt;/div&gt;
+            &lt;div
+              class=&quot;DetailsSection__content&quot;
+            /&gt;
+          &lt;/section&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+    at getByText (/home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/node_modules/.pnpm/@testing-library+dom@8.20.1/node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+    at /home/priyam/Dev/interviewProjects/reactConferenceAdminPanel/src/tests/ProposalDetailsPage.test.jsx:88:16</failure>
+    </testcase>
+  </testsuite>
 </testsuites>

@@ -21,14 +21,14 @@ You are expected to implement missing code used within two subpages:
 
 ### 1. List of proposals
 
-`<ProposalListPage>` should be rendered under `/proposals` URL path and display list of proposals fetched from API (without any sorting nor paging applied).
+~~`<ProposalListPage>` should be rendered under `/proposals` URL path and display list of proposals fetched from API (without any sorting nor paging applied).~~
 
 1. For every proposal following data should be rendered:
-  - talk title,
-  - speaker's name,
-  - talk category, prefixed with `category: `,
-  - status description: _"rejected"_, _"accepted"_, _"to be decided"_ or _"(unknown)"_ (for any unexpected status), prefixed with `status: `. You need to map existing statuses into these descriptions,
-  - color bar and label indicating whether the proposal was accepted (green), declined (red), or not decided yet (neutral),
+  - ~~talk title,~~
+  - ~~speaker's name,~~
+  - ~~talk category, prefixed with `category: `,~~
+  - ~~status description: _"rejected"_, _"accepted"_, _"to be decided"_ or _"(unknown)"_ (for any unexpected status), prefixed with `status: `. You need to map existing statuses into these descriptions,~~
+  - ~~color bar and label indicating whether the proposal was accepted (green), declined (red), or not decided yet (neutral),~~
   - button to accept proposal (if not accepted),
   - button to reject proposal (if not rejected).
 
@@ -52,11 +52,11 @@ You are expected to implement missing code used within two subpages:
 `<ProposalDetailsPage>` should be rendered under `/proposals/:proposalId` URL path (where `proposalId` is ID of such proposal) and display details fetched from API.
 
 1. Details to render are:
-   - speaker's name,
-   - talk category,
-   - talk title,
-   - talk description – split into separate `<p>` for each paragraph (on `\n` character),
-   - button which navigates back to `<ProposalListPage>`.
+   - ~~speaker's name,~~
+   - ~~talk category,~~
+   - ~~talk title,~~
+   - ~~talk description – split into separate `<p>` for each paragraph (on `\n` character),~~
+   - ~~button which navigates back to `<ProposalListPage>`.~~
 
 2. `<Loading>` should be rendered during data fetch.
 
