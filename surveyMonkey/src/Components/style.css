@@ -1,0 +1,25 @@
+#shell {
+    border: 1px solid black;
+}
+
+section {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    &:last-of-type {
+        border: none;
+    }
+}
+
+.gallery {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+
+.gallery-item {
+    padding: 5px;
+    border: 1px solid black;
+    min-height: 150px;
+}
+
