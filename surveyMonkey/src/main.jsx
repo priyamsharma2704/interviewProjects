@@ -43,18 +43,20 @@ const SearchBar = () => {
     );
 };
 
-const GalleryItem = ({photo}) => {
-    
+const GalleryItem = ({photo}) => 
+{
+    console.log(photo)   
     return (
       <div className="gallery-item" onClick={onPhotoClick}>
-      {/* <span>{photo.author}</span>
-      <img src={photo.download_url} style={{width:100, border: selectedItem == photo.id? "3px solid green" : '1px solid white'}} onClick={()=>handleClick(photo)}/> */}
+       <img src={photo.download_url} style={{width:100}}/> 
+        <spna>{photo.author}</spna>
   </div>
     );
 };
 
-const Gallery = ({photos}) => {
-    
+const Gallery = ({photos}) => 
+{
+   
     const [selectedItem, setSelectedItem] = useState([]);
     function handleClick(photo)
     {
